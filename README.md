@@ -24,4 +24,4 @@ Contributions are welcome! If you would like to contribute to the project, pleas
 
 ## Contact
 
-If you have any questions or feedback, please email [ataybusra2004@gmail.com](mailto:pedrogamase@gmail.com).
+If you have any questions or feedback, please email [pedrogamase@gmail.com](mailto:pedrogamase@gmail.com).
