@@ -1,4 +1,4 @@
-# ToDo List Project - C# ASP.NET MVC
+# 📜 ToDo List Project - C# ASP.NET MVC
 
 This project is a simple To-Do List web application developed using C# language with ASP.NET MVC design pattern. Users can manage their tasks by listing, editing, marking completion status, and deleting tasks through the user-friendly interface provided by the application.
 
