@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TaskList.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cadastro de Tarefas</h1>
+
+<p>
+    <a asp-action="Create"><img src="~/adicionar.png" alt="adcionar" style="width:20px; height:20px;" /> Novo Cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prioridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Setor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prioridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.NomeUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Setor.NomeSetor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdTarefa"><img src="~/Edit.png" alt="Edit" style="width:20px; height:20px;" /></a> |
+                <a asp-action="Details" asp-route-id="@item.IdTarefa"><img src="~/Details.png" alt="Edit" style="width:20px; height:20px;" /></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdTarefa"><img src="~/Delete.png" alt="Detalhes" style="width:20px; height:20px;" /></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
